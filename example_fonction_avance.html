@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// gauche, haut, largeur, hauteur
+
+var largeur = 150;
+var hauteur = 150;
+var gauche = 100;
+var dessus = 100;
+
+function emile(gauche, dessus, largeur, hauteur) {
+  ctx.rect(gauche, dessus, largeur, hauteur);
+  ctx.rect(gauche, dessus, largeur/30, hauteur/30);
+}
+
+for (i = 0; i < 6; i++) {
+  emile(gauche + i*15, dessus +i*15, largeur -i*30, hauteur -i*30);
+}
+
+ctx.stroke();
+
+</script>
+
+</body>
+</html>

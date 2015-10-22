@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// gauche, haut, largeur, hauteur
+
+ctx.rect(100, 100, 100, 100);
+ctx.rect(90, 90, 120, 120);
+ctx.rect(80, 80, 140, 140);
+ctx.rect(70, 70, 160, 160);
+ctx.rect(60, 60, 180, 180);
+ctx.rect(50, 50, 200, 200);
+ctx.rect(40, 40, 220, 220);
+
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
