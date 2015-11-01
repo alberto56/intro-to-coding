@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// gauche, haut, largeur, hauteur
+
+var quantite = 10;
+var difference = -15;
+var largeur = 150;
+var hauteur = 15;
+var gauche = 10;
+var dessus = 1;
+
+function emile(gauche, dessus, largeur, hauteur) {
+  ctx.rect(gauche, dessus, largeur, hauteur);
+  ctx.rect(gauche, dessus, largeur/5, hauteur/30);
+  ctx.rect(gauche + largeur - largeur/5, dessus + hauteur - largeur/5, largeur/5, hauteur/30);
+  ctx.rect(gauche, dessus + hauteur - largeur/5, largeur/5, hauteur/30);
+  ctx.rect(gauche + largeur - largeur/5, dessus, largeur/30, hauteur/30);
+}
+
+for (i = -5; i < quantite; i++) {
+  emile(gauche + i*difference, dessus +i*difference, largeur -i*difference*2, hauteur -i*difference*2);
+}
+
+ctx.stroke();
+
+</script>
+
+</body>
+</html>

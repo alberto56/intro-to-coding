@@ -18,9 +18,11 @@ var dessus = 100;
 
 function emile(gauche, dessus, largeur, hauteur) {
   ctx.rect(gauche, dessus, largeur, hauteur);
+  ctx.rect(gauche+5, dessus+5, largeur, hauteur);
 }
 
 emile(150, 150, 30, 30);
+emile(170, 170, 50, 50);
 
 ctx.stroke();
 
